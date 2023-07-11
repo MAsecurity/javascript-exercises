@@ -1,6 +1,7 @@
 const repeatString = function(userInput, number) {
   if (number < 0) {
     return 'ERROR'
+    
   }else {
     let string = "";
 
