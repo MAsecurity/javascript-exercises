@@ -1,7 +1,7 @@
 const fibonacci = function(num) {
   //convert input to number
   let number = +num;
-  if(number === 1) {
+  if(number === 0) {
     return 1;
   }else if (number < 0) {
     return "OOPS";
