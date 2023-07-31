@@ -1,9 +1,13 @@
 const findTheOldest = function(array) {
-  return array.reduce((oldest,currentPerson) => {
-    let ageOfOldest = getAge(oldest.yearOfBirth, oldest.yearOfDeath);
-    let ageOfCurrentPerson = getAge(currentPerson.yearOfBirth, currentPerson.yearOfDeath);
-    return (ageOfOldest < ageOfCurrentPerson) ? currentPerson : oldest;
-  });
+  return array.reduce((oldest, currentPerson) => {
+    let oldestAge = getAge(oldest.yearOfBirth, oldest.yearOfDeath);
+    let currentPersonAge = getAge(currentPerson.yearOfBirth, currentPerson.yearOfDeath);
+    if (oldestAge > currentPersonAge) {
+      return oldest;
+    }else {
+      return currentPerson;
+    }
+  })
 
 };
 
